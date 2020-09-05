@@ -1,0 +1,19 @@
+<template>
+	<div id="app">
+		<Header />
+		<router-view path="$router.key" />
+	</div>
+</template>
+
+<script>
+	import './assets/css/bootstrap.min.css';
+
+	import Header from './components/Header.vue';
+
+	export default {
+		name: 'App',
+		components: {
+			Header,
+		}
+	}
+</script>
