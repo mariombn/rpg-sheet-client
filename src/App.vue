@@ -1,7 +1,8 @@
 <template>
 	<div id="app">
 		<Header />
-		<router-view path="$router.key" />
+		<Sheet />
+		<!-- <router-view path="$router.key" /> -->
 	</div>
 </template>
 
@@ -9,11 +10,13 @@
 	import './assets/css/bootstrap.min.css';
 
 	import Header from './components/Header.vue';
+	import Sheet from './components/Sheet.vue';
 
 	export default {
 		name: 'App',
 		components: {
 			Header,
+			Sheet
 		}
 	}
 </script>
