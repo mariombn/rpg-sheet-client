@@ -1,0 +1,103 @@
+{
+    "id": 1,
+    "userId": 1,
+    "notes": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    "userName": "Mario de Moraes Barros Neto",
+    "name": "Rogério Gustavo",
+    "chronicle": "Chronicle",
+    "nature": "Nature",
+    "demeanor": "Demeanor",
+    "concept": "Concept",
+    "clan": "Clan",
+    "generation": "Generation",
+    "sire": "Sire",
+    "attributes": {
+        "physical": {
+            "streength": 1,
+            "dexterity": 1,
+            "stamina": 1
+        },
+        "social": {
+            "charisma": 1,
+            "manipulation": 1,
+            "appearance": 1
+        },
+        "mental": {
+            "perception": 1,
+            "intelligence": 1,
+            "wits": 1
+        }
+    },
+    "abilities": {
+        "talents": {
+            "alertness": 1,
+            "athletics": 1,
+            "awareness": 1,
+            "brawl": 1,
+            "empathy": 1,
+            "expression": 1,
+            "intimidation": 1,
+            "leadership": 1,
+            "streetwise": 1,
+            "subterfuge": 1
+        },
+        "skills": {
+            "animal ken": 1,
+            "crafts": 1,
+            "drive": 1,
+            "etiquette": 1,
+            "firearms": 1,
+            "larceny": 1,
+            "melee": 1,
+            "performace": 1,
+            "stealth": 1,
+            "survivel": 1
+        },
+        "knowledges": {
+            "academics": 1,
+            "computer": 1,
+            "finance": 1,
+            "investigation": 1,
+            "law": 1,
+            "medicine": 1,
+            "occult": 1,
+            "politics": 1,
+            "science": 1,
+            "technology": 1
+        }
+    },
+    "advantages": {
+        "disciplines": {
+            "name1": 1,
+            "name2": 2,
+            "name3": 3
+        },
+        "backgrounds": {
+            "name1": 1,
+            "name2": 2,
+            "name3": 3
+        },
+        "virtues": {
+            "concience": 1,
+            "self-controll": 1,
+            "courage": 1
+        }
+    },
+    "footer": {
+        "merits": {
+            "name1": 1,
+            "name2": 2,
+            "name3": 3
+        },
+        "flaws": {
+            "name1": 1,
+            "name2": 2,
+            "name3": 3
+        },
+        "humanity": 4,
+        "willpower-total": 10, 
+        "willpower": 7,
+        "bloodpool": 15,
+        "health": 0
+    }
+}
