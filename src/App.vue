@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="app" style="margin-bottom: 50px;">
 		<Header />
 		<Sheet />
 		<!-- <router-view path="$router.key" /> -->
@@ -8,6 +8,7 @@
 
 <script>
 	import './assets/css/bootstrap.min.css';
+	import './assets/css/app.css';
 
 	import Header from './components/Header.vue';
 	import Sheet from './components/Sheet.vue';

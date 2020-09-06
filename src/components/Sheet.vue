@@ -611,14 +611,26 @@
                                     <div class="col-md-4">
 
                                         <div class="card">
+                                            <!--
                                             <div class="card-header">
                                                 disciplines
+                                            </div>
+                                            -->
+                                            <div class="card-header container-fluid btn-card">
+                                                <div class="row">
+                                                    <div class="col-md-8">
+                                                       disciplines
+                                                    </div>
+                                                    <div class="col-md-4 float-right">
+                                                        <button class="btn btn-primary btn-sm">Add</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="col-md-12">
 
-                                                        <div class="input-group mb-3 input-group-sheet-point" v-for="discipline in sheet.advantages.disciplines" :key="discipline">
+                                                        <div class="input-group mb-3 input-group-sheet-point" v-for="discipline in sheet.advantages.disciplines" :key="discipline.value">
                                                             <input type="text" class="form-control" v-model="discipline.name">
                                                             <select class="custom-select" id="streength" v-model="discipline.value">
                                                                 <option v-for="point in sheetPoint" :key="point" :value="point">{{ point }}</option>
@@ -641,7 +653,7 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
 
-                                                        <div class="input-group mb-3 input-group-sheet-point" v-for="background in sheet.advantages.backgrounds" :key="background">
+                                                        <div class="input-group mb-3 input-group-sheet-point" v-for="background in sheet.advantages.backgrounds" :key="background.value">
                                                             <input type="text" class="form-control" v-model="background.name">
                                                             <select class="custom-select" id="streength" v-model="background.value">
                                                                 <option v-for="point in sheetPoint" :key="point" :value="point">{{ point }}</option>
@@ -664,7 +676,7 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
 
-                                                        <div class="input-group mb-3 input-group-sheet-point" v-for="virtue in sheet.advantages.virtues" :key="virtue">
+                                                        <div class="input-group mb-3 input-group-sheet-point" v-for="virtue in sheet.advantages.virtues" :key="virtue.value">
                                                             <input type="text" class="form-control" v-model="virtue.name">
                                                             <select class="custom-select" v-model="virtue.value">
                                                                 <option v-for="point in sheetPoint" :key="point" :value="point">{{ point }}</option>
@@ -675,6 +687,119 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="card">
+                            <div class="card-header">
+                                misc
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+
+                                        <div class="card">
+                                            <div class="card-header">
+                                                merits
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+
+                                                        <div class="input-group mb-3 input-group-sheet-point" v-for="merit in sheet.footer.merits" :key="merit.value">
+                                                            <input type="text" class="form-control" v-model="merit.name">
+                                                            <select class="custom-select" id="streength" v-model="merit.value">
+                                                                <option v-for="point in sheetPoint" :key="point" :value="point">{{ point }}</option>
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header">
+                                                flaws
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+
+                                                        <div class="input-group mb-3 input-group-sheet-point" v-for="flaw in sheet.footer.flaws" :key="flaw.value">
+                                                            <input type="text" class="form-control" v-model="flaw.name">
+                                                            <select class="custom-select" id="streength" v-model="flaw.value">
+                                                                <option v-for="point in sheetPoint" :key="point" :value="point">{{ point }}</option>
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        
+                                        <div class="input-group mb-3 input-group-sheet-point">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="humanity">humanity</label>
+                                            </div>
+                                            <select class="custom-select" id="humanity" v-model="sheet.footer.humanity">
+                                                <option v-for="point in sheetPoint" :key="point" :value="point">{{ point }}</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group mb-3 input-group-sheet-point">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="willpower">willpower</label>
+                                            </div>
+                                            <select class="custom-select" id="willpower" v-model="sheet.footer.willpower">
+                                                <option v-for="point in sheetPoint" :key="point" :value="point">{{ point }}</option>
+                                            </select>
+                                            <select class="custom-select" id="willpower-total" v-model="sheet.footer.willpowertotal">
+                                                <option v-for="point in sheetPoint" :key="point" :value="point">{{ point }}</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group mb-3 input-group-sheet-point">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="willpower">willpower</label>
+                                            </div>
+                                            <select class="custom-select" id="willpower" v-model="sheet.footer.willpower">
+                                                <option v-for="point in sheetPoint" :key="point" :value="point">{{ point }}</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group mb-3 input-group-sheet-point">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="bloodpool">bloodpool</label>
+                                            </div>
+                                            <select class="custom-select" id="bloodpool" v-model="sheet.footer.bloodpool">
+                                                <option v-for="point in sheetPoint" :key="point" :value="point">{{ point }}</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group mb-3 input-group-sheet-point">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="health">health</label>
+                                            </div>
+                                            <select class="custom-select" id="health" v-model="sheet.footer.health">
+                                                <option v-for="point in sheetPoint" :key="point" :value="point">{{ point }}</option>
+                                            </select>
+                                        </div>
+
+
+                                        
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <textarea v-model="sheet.notes" rows="20" class="form-control" id="validationTextarea" placeholder="Notes" required></textarea>
                                     </div>
 
                                 </div>
@@ -698,14 +823,11 @@ export default {
     data(){
         return {
             sheet: [],
-            sheetPoint: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+            sheetPoint: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         }
     },
     mounted(){
-        //5531308b-1f5f-4385-822d-9c47e25e5009
-        //7b5fddd7-c2a7-46f3-8852-2c369408b082
-
-        api.get('bcc56af2-9e57-426e-92cf-61559a8e42ba').then(response => {
+        api.get('f54734b7-84bf-4fc3-b297-a3e5be7db04c').then(response => {
             this.sheet = response.data;
         });
     },
@@ -738,6 +860,11 @@ export default {
 
     .card-header {
         text-align: center;
+        font-weight:bold;
+    }
+
+    .btn-card {
+        text-align: left;
         font-weight:bold;
     }
 
