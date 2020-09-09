@@ -91,7 +91,9 @@ export default {
             api.post('auth/singin', this.dataAuth).then(response => {
                 if (response.data.success) {
                     if (response.data.data.api_token) {
-                        this.$store.auth = response.data.data.api_token;
+                        // TODO: Implementar Vuex para trazer mais segurança
+                        //this.$store.auth = response.data.data.api_token;
+                        localStorage.setItem('user', response.data.data.api_token);
                         this.$router.push('home');
                     }
                 } else {
