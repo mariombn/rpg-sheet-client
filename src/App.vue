@@ -1,41 +1,41 @@
 <template>
-	<div id="app" style="margin-bottom: 50px;">
-		<Header />
-
-		<router-view path="$router.key" />
-	</div>
+  <div id="main-app">
+    <v-card class="mx-auto overflow-hidden" height="400">
+      <v-app>
+        <Header />
+        <Menu />
+        <v-main>
+          <router-view></router-view>
+        </v-main>
+        <Footer />
+      </v-app>
+    </v-card>
+  </div>
 </template>
 
 <script>
-	import './assets/css/bootstrap.dark.min.css';
-	//import './assets/css/app.css';
+import Header from '@/template/header';
+import Menu from '@/template/menu';
+import Footer from '@/template/footer';
 
-	import Header from './components/Header.vue';
-
-	export default {
-		name: 'App',
-		data() {
-			return {
-				$auth: {},
-				$message: {
-					success: null,
-					danger: null
-				},
-				messageTemp: {
-					success: null,
-					danger: null
-				},
-			}
-		},
-		components: {
-			Header
-		}
-	}
+export default {
+  data: () => ({}),
+  components: {
+    Header,
+    Menu,
+    Footer
+  },
+  methods: {
+    logoff: function () {
+      this.$store.commit('logoff');
+      this.$router.push('login');
+    }
+  }
+};
 </script>
 
-<style scoped>
-	.message-area {
-		margin-top: 20px;
-		margin-bottom: 20px;
-	}
+<style>
+.router-link {
+  color: transparent !important;
+}
 </style>
