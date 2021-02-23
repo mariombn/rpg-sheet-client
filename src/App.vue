@@ -3,10 +3,13 @@
     <v-card class="mx-auto overflow-hidden" height="400">
       <v-app>
         <Header />
+        <chat/>
         <Menu />
         <v-main>
+
           <router-view></router-view>
         </v-main>
+
         <Footer />
       </v-app>
     </v-card>
@@ -15,6 +18,7 @@
 
 <script>
 import Header from '@/template/header';
+import Chat from '@/components/chat/Index';
 import Menu from '@/template/menu';
 import Footer from '@/template/footer';
 
@@ -22,6 +26,7 @@ export default {
   data: () => ({}),
   components: {
     Header,
+    Chat,
     Menu,
     Footer
   },
